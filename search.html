@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <script src="search.js" type="text/javascript"></script>
+        <script src="https://apis.google.com/js/client.js?onload=onClientLoad" type="text/javascript"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+                <script src="searchmenu.js"></script>
+        <link href='searchstyle.css' rel='stylesheet'>
+    </head>
+    
+    <body>
+        <!--<div>
+            
+        </div>
+        -->
+        <div class="menu">
+            
+            <!-- Menu icon -->
+            <div class="icon-close">
+                <img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/uber/close.png">
+            </div>
+            
+            <!-- Menu --> 
+            <ul>
+                <li><form>
+                <input id="mySearch" type="text" />
+                <!--<button type="button" onclick="getUserQuery()" >Submit</button>-->
+            </form>
+            <a href="#" onclick="getUserQuery(); return false;">Search</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Help</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        
+        <!-- Main body -->
+        <!--<div class="jumbotron">-->
+        
+            <div class="icon-menu">
+                <!--<i class="fa fa-bars"></i>-->
+                Menu
+            </div>
+        <!--</div>-->
+        
+        
+        <div class="container">
+            <ul class="row">
+                <li class="col-lg-4 col-md-2 col-sm-3 col-xs-4">
+                    <img src="https://pixabay.com/static/uploads/ec/2015/09/27/09-56-33-519_250x250.jpg"/>
+                </li>
+                <li class="col-lg-4 col-md-2 col-sm-3 col-xs-4">
+                    <img src="https://pixabay.com/static/uploads/ec/2015/09/27/09-56-29-188_250x250.jpg"/>
+                </li>
+                <li class="col-lg-4 col-md-2 col-sm-3 col-xs-4">
+                    <img src="https://pixabay.com/static/uploads/ec/2015/09/27/09-56-22-784_250x250.jpg"/>
+                </li>
+                <li class="col-lg-4 col-md-2 col-sm-3 col-xs-4">
+                    <img src="https://pixabay.com/static/uploads/ec/2015/09/27/09-56-12-616_250x250.jpg"/>
+                </li>
+                <li class="col-lg-4 col-md-2 col-sm-3 col-xs-4">
+                    <img src="https://pixabay.com/static/uploads/ec/2015/09/27/09-56-33-519_250x250.jpg"/>
+                </li>
+                <li class="col-lg-4 col-md-2 col-sm-3 col-xs-4">
+                    <img src="https://pixabay.com/static/uploads/ec/2015/09/27/09-56-29-188_250x250.jpg"/>
+                </li>
+            </ul>
+        </div>
+        
+        <div>
+            <pre id="response"></pre>
+        </div>
+    
+    </body>
+</html>

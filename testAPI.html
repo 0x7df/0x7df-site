@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script>
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "https://www.codecademy.com/", true);
+            xhr.send();
+            
+            var demo = '{"pets": { "name": "Jeffrey", "species": "Giraffe"}}';
+            var json = JSON.parse(demo);
+            
+            function outputToPage() {
+                /*var string = prompt("Type a string:");
+                $('.output').append(string + "<br/>");*/
+                $('.output').append(xhr.status + "<br/>");
+                $('.output').append(xhr.statusText + "<br/>");
+                $('.output').append(json + "<br/>");
+            };
+        </script>
+        <script>
+        </script>
+    </head>
+    <body>
+        <div><button type="button" onclick="outputToPage()">Test API</button></div>
+        <div class="output">
+          <p>Add here:</p>
+        <div>
+    </body>
+</html>

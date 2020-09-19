@@ -1,0 +1,64 @@
+<html>
+
+<head>
+<title>Crypto</title>
+</head>
+
+<body>
+<h1>Crypto</h1>
+<p> To get the next clue, you need to tell me where to leave it.</p>
+
+<p>Use the Ceasar Cipher to create a coded message saying which room to hide
+the next clue in.</p>
+
+<p>For the key, use the number of cats in the house, multiplied by the number
+of bedrooms in the house.</p>
+
+
+<form id="frm1">
+    Paste your message into the text box below:<br>
+    <input type="text" name="coded_message"><br>
+</form>
+
+<button onclick="myFunction()">Submit</button>
+
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("frm1");
+  var answ = "";
+  var text = "";
+  var i;
+  var rooms = {
+      'livingroom':     "The living room",
+      'lounge':         "The living room",
+      'diningroom':     "The dining room",
+      'playroom':       "The play room",
+      'kitchen':        "The kitchen",
+      'milliesroom':    "Amelia's bedroom",
+      'bensroom':       "Ben's bedroom",
+      'mumanddadsroom': "Mum and Dad's bedroom",
+      'study':          "The study",
+      'spareroom':      "The spare room",
+      'nanasroom':      "The spare room"
+  };
+for (i = 0; i < x.length ;i++) {
+    answ = x.elements[i].value;
+    answ = answ.toLowerCase();
+    answ = answ.replace(/\s/g, '');
+    answ = answ.replace(/[',.]/g, '');
+    answ = answ.replace(/the/g, '');
+    answ = answ.replace(/bedroom/g, 'room');
+    if (answ in rooms) {
+        text += "Your answer was " + answ + "<br>";
+    } else {
+        text += "I didn't understand \"" + x.elements[i].value + "<br>"
+    }
+    document.getElementById("demo").innerHTML = text;
+}
+</script>
+
+</body>
+</html>
